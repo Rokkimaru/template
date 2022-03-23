@@ -19,11 +19,442 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <link rel="stylesheet" href="../css/style.css"/>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root" class="root">
+      <header class="header">
+        <div class="top-bar">
+          <div class="arrows">
+            <button class="left  arrow" title="Назад"></button>
+            <button class="right  arrow" title="Вперед"></button>
+          </div>
+          <div></div>
+          <div class="tarif">
+            <button class="change-tarif">Сменить тариф</button>
+          </div>
+          <div></div>
+            <button class="account">
+              <img class="account-image" src="../images/account.png">
+              <span>Аккаунт</span>
+              <img class="account-image" src="../images/arrow_down.png">
+            </button>
+        </div>
+      </header>
+      
+      <div class="left-bar">
+        <div class="bar">
+          <div class="logo" title="Spotify Clone">
+            <a href="index.html">
+            <img class="logo-image" src="../images/spotify_logo.png"></img>
+          </div>
+          <div>
+            <ul class="menu">
+              <li class = "home  list">
+                <a class="link" href="index.html">
+                  <span>Главная</span>
+                </a>
+              </li>
+              <li class="search  list">
+                <a class="link" href="index.html">
+                  <span>Поиск</span>
+                </a>
+              </li>
+              <li class="mediateka  list">
+                <a class="link" href="index.html">
+                  <span>Моя медиатека</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="playlist">
+            <div class="add-playlist">
+              <img src="../images/addplaylist.png"></img>
+              <span>Создать плейлист</span>
+            </div>
+            <div class="add-playlist">
+              <img src="../images/heart.png"></img>
+              <span>Любимые треки</span>
+            </div>
+            <div class="my-playlist">
+              <p>My first playlist</p>
+            </div>
+          </div>
+          
+          <div class="download">
+            <span> Загрузить приложение</span>
+          </div>  
+        </div>   
+      </div>
+      
+     
+      <main class="content">
+        <div class="music">
+          <h1>Доброго времени суток</h1>
+          <section class="songs">
+            <div class="song">
+              <div>
+                <img class="song-image" src="../images/loverboy.png"></img>
+              </div>
+              <div class="song-name">
+                Loverboy
+              </div>
+            </div>
+            <div class="song">
+              <div>
+                <img class="song-image" src="../images/song_1.png"></img>
+              </div>
+              <div class="song-name">
+                Код
+              </div>
+            </div>
+            <div class="song">
+              <div>
+                <img class="song-image" src="../images/sister.png"></img>
+              </div>
+              <div class="song-name">
+                Младшая сестра
+              </div>
+            </div>
+            <div class="song">
+              <div>
+                <img class="song-image" src="../images/depo.png"></img>
+              </div>
+              <div class="song-name">
+                NBA
+              </div>
+            </div>
+            <div class="song">
+              <div>
+                <img class="song-image" src="../images/top_ru.png"></img>
+              </div>
+              <div class="song-name">
+                Топ треков (Россия)
+              </div>
+            </div>
+            <div class="song">
+              <div>
+                <img class="song-image" src="../images/glow.png"></img>
+              </div>
+              <div class="song-name">
+                Glow
+              </div>
+            </div>
+          </section>
+          <h2>Только для тебя, user</h2>
+          <section class="mixes">  
+              <div class="mix">
+                <div>
+                  <img class="mix-image" src="../images/week.png"></img>
+                </div>
+                <div class="mix-name">
+                  Открытия недели
+                  <div class="mix-author">
+                    Новые треки и редкие композиции в еженедельном миксе специально для тебя. Лови обновление каждый понедельник.
+                  </div>
+                </div>
+              </div>
+
+              <div class="mix">
+                <div>
+                  <img class="mix-image" src="../images/mix1.png"></img>
+                </div>
+                <div class="mix-name">
+                  Микс дня #1
+                  <div class="mix-author">
+                    Джизус, Дора, LXNER и не только
+                  </div>
+                </div>
+              </div>
+
+              <div class="mix">
+                <div>
+                  <img class="mix-image" src="../images/mix2.png"></img>
+                </div>
+                <div class="mix-name">
+                  Микс дня #2
+                  <div class="mix-author">
+                    LIL MORTY, midix, LILDRUGHILL и не только
+                  </div>
+                </div>
+              </div>
+
+              <div class="mix">
+                <div>
+                  <img class="mix-image" src="../images/mix3.png"></img>
+                </div>
+                <div class="mix-name">
+                  Микс дня #3
+                  <div class="mix-author">
+                    SALUKI, ROCKET, PLOHOYPAREN и не только
+                  </div>
+                </div>
+              </div>
+
+          </section>
+          <h2>Недавно просулшано</h2>
+          <section class="mixes">
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/on_repeat.png"></img>
+              </div>
+              <div class="mix-name">
+                On Repeat
+                <div class="mix-author">
+                  Треки, которые тебе нравятся сейчас
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/garden.png"></img>
+              </div>
+              <div class="mix-name">
+                GHETTO GARDEN
+                <div class="mix-author">
+                  MAYOT
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/mix4.jpg"></img>
+              </div>
+              <div class="mix-name">
+                Микс дня #4
+                <div class="mix-author">
+                  convolk, SpaceMan Zack, Lil Peep и не только
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/untitled.jpg"></img>
+              </div>
+              <div class="mix-name">
+                untitled
+                <div class="mix-author">
+                  semmmyq,shinra
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/mix3.png"></img>
+              </div>
+              <div class="mix-name">
+                Микс дня #3
+                <div class="mix-author">
+                  SALUKI, ROCKET, PLOHOYPAREN и не только
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/dream.jpg"></img>
+              </div>
+              <div class="mix-name">
+                Tsukuyomi Dream
+                <div class="mix-author">
+                  ROCKET
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <h2>Слушаем дальше?</h2>
+          <section class="mixes">
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/song_1.png"></img>
+              </div>
+              <div class="mix-name">
+                Код
+                <div class="mix-author">
+                  whyalive,Horoshiyagni
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/time-capsule.jpg"></img>
+              </div>
+              <div class="mix-name">
+                Ностальгический микс
+                <div class="mix-author">
+                  Мы создали ностальгический плейлист специально для тебя
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/bike.jpg"></img>
+              </div>
+              <div class="mix-name">
+                Мой байк
+                <div class="mix-author">
+                  СЕРЕГА ПИРАТ
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/3ternity.jpg"></img>
+              </div>
+              <div class="mix-name">
+                SYSTEM 3RASE
+                <div class="mix-author">
+                  3TERNITY
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/ice.jpg"></img>
+              </div>
+              <div class="mix-name">
+                Лёд
+                <div class="mix-author">
+                  WENARO,LXNER
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/midix.jpg"></img>
+              </div>
+              <div class="mix-name">
+                HYPERPOP ATTACK
+                <div class="mix-author">
+                  Midix
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/dora-mix.jpg"></img>
+              </div>
+              <div class="mix-name">
+                This is Дора.
+                <div class="mix-author">
+                  Все лучшие треки в одном плейлисте.
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <h2>Лучшие треки
+            <p class = "substr">Подборки хитов по исполнителям.</p>
+          </h2>
+          <section class="mixes">
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/dora-mix.jpg"></img>
+              </div>
+              <div class="mix-name">
+                This is Дора.
+                <div class="mix-author">
+                  This is Дора. Все лучшие треки в одном плейлисте.
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/fludd.jpg"></img>
+              </div>
+              <div class="mix-name">
+                This is GONE.Fludd
+                <div class="mix-author">
+                  This is GONE.Fludd. Все лучшие треки в одном плейлисте.
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/depo.jpg"></img>
+              </div>
+              <div class="mix-name">
+                This is Boulevard Depo
+                <div class="mix-author">
+                  This is Boulevard Depo. Все лучшие треки в одном плейлисте.
+                </div>
+              </div>
+            </div>
+
+            <div class="mix">
+              <div>
+                <img class="mix-image" src="../images/buda.jpg"></img>
+              </div>
+              <div class="mix-name">
+                This is OG Buda.
+                <div class="mix-author">
+                  This is OG Buda. Все лучшие треки в одном плейлисте.
+                </div>
+              </div>
+            </div>
+          </section>
+          <section></section>
+          <section></section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-bar">
+          <div class="now-playing">
+            <div>
+              <img class="now-image" src="../images/mayot.png"></img>
+            </div>
+            <div class="author-name">
+              <div>
+                Mayot
+              </div>
+              <div>
+                Снег
+              </div>
+            </div>
+            <div>
+              <img class="playing-image" src="../images/add_heart.png">
+            </div>
+            <div>
+              <img class="pip-image" src="../images/picture-in-picture.png">
+            </div>
+          </div>
+          <div class="playing-main">
+            <div>
+              <img class="shuffle-image" src="../images/shuffle.png">
+              <img class="play-btn-image" src="../images/play-previous.png">
+              <img class="play-btn-image" src="../images/play_btn.png">
+              <img class="play-btn-image" src="../images/play-next.png">
+              <img class="play-btn-image" src="../images/repeat.png">
+            </div>
+            <div>
+              <img src="../images/progress-bar-snow.PNG">
+            </div>
+          </div>
+          <div>
+            <img class="pip-image" src="../images/volume.png">
+          </div>
+        </div>
+      </footer>
+
+    </div>
     <!--
+       
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -32,6 +463,7 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    --> 
+    
   </body>
 </html>
