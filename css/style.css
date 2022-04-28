@@ -30,11 +30,11 @@ body{
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr auto;
     height: 100%;
+    width: 100%;
     min-height: 100%;
     min-width: 100%;
-    position: fixed;
-    width: 100%;
-    overflow-y: scroll;
+    position: fixed; /*необходим,чтобы при изменении размера сохранялся класс root*/
+    overflow-y: scroll; /*необходим,чтобы добавить полосу прокрутки по основному контенту*/
 }
 
 .list{
@@ -117,8 +117,15 @@ body{
     position: fixed;
     height: 64px;
     min-width: 0;
-    width: 85%;
+    width: 100%;
+    max-width: 1500px;
     background-color: #000;
+}
+
+@media (max-width:1024px){
+    .top-bar{
+        max-width: 800px;
+    }
 }
 
 .left-bar{
@@ -157,18 +164,16 @@ body{
 }
 
 .playlist{
-    display: flex;
-    flex-direction: column;
     min-height: 0;
     height: 100%;
 }
 
 .add-playlist{
     image-rendering: optimizeSpeed;
-    color: #708090;;
+    color: #708090;
 }
 
-.add-playlist img{
+.add-playlist-img{
     width: 1.4em;
     height: 1.4em;
     image-rendering: optimizeSpeed;
@@ -176,13 +181,13 @@ body{
 }
 
 .my-playlist{
-    color:#708090;;
+    color:#708090;
     padding-left: 0.8em; 
 }
 
 .account-image{
-    width: 2vh;
-    height: 2vh;
+    width: 25px;
+    height: 25px;
     image-rendering: optimizeSpeed;
 }
 
@@ -196,7 +201,7 @@ body{
     cursor: pointer;
     height: 32px;
     min-width: 32px;
-    padding: 2px;
+
 }
 
 .content{
@@ -205,6 +210,8 @@ body{
     margin-top: 55px;
     background-color: #000;
     color: white;
+    margin-bottom: 55px;
+    height: 100%;
 }
 
 .music{
@@ -217,6 +224,7 @@ body{
     display: grid;
     grid-template: auto/repeat(auto-fill,minmax(max(270px,30%),1fr));
     grid-template-rows: auto;
+    gap: 10px;
 }
 
 .song{
@@ -243,6 +251,7 @@ body{
     display: grid;
     min-width: 180px;
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 20px;
 }
 
 .mix{
@@ -274,7 +283,7 @@ body{
 
 .footer{ 
     grid-area: footer-area;
-    height: 10%;
+    height: 85px;
     min-width: 0;
     width: 100%;
     background-color: #181818;
@@ -286,9 +295,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 85px;
     min-width: 0;
-    width: 89%;
+    width: 100%;
+    max-width: 1800px;
     position: relative;
 }
 
@@ -337,12 +347,12 @@ body{
     height: 30px;
 }
 
-.menu li{
+.menu-elem{
     color: #708090;
     margin-bottom: 1em;
 }
 
-h2{
+.music-head{
     font-size: 1.5rem;
 }
 

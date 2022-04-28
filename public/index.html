@@ -9,15 +9,6 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
     <link rel="stylesheet" href="../css/style.css"/>
   </head>
@@ -30,11 +21,9 @@
             <button class="left  arrow" title="Назад"></button>
             <button class="right  arrow" title="Вперед"></button>
           </div>
-          <div></div>
           <div class="tarif">
             <button class="change-tarif">Сменить тариф</button>
           </div>
-          <div></div>
             <button class="account">
               <img class="account-image" src="../images/account.png">
               <span>Аккаунт</span>
@@ -46,22 +35,22 @@
       <div class="left-bar">
         <div class="bar">
           <div class="logo" title="Spotify Clone">
-            <a href="index.html">
+            <a href="index.html"></a>
             <img class="logo-image" src="../images/spotify_logo.png"></img>
           </div>
           <div>
             <ul class="menu">
-              <li class = "home  list">
+              <li class = "home  list menu-elem">
                 <a class="link" href="index.html">
                   <span>Главная</span>
                 </a>
               </li>
-              <li class="search  list">
+              <li class="search  list menu-elem">
                 <a class="link" href="index.html">
                   <span>Поиск</span>
                 </a>
               </li>
-              <li class="mediateka  list">
+              <li class="mediateka  list menu-elem">
                 <a class="link" href="index.html">
                   <span>Моя медиатека</span>
                 </a>
@@ -70,11 +59,11 @@
           </div>
           <div class="playlist">
             <div class="add-playlist">
-              <img src="../images/addplaylist.png"></img>
+              <img src="../images/addplaylist.png" class="add-playlist-img"></img>
               <span>Создать плейлист</span>
             </div>
             <div class="add-playlist">
-              <img src="../images/heart.png"></img>
+              <img src="../images/heart.png" class="add-playlist-img"></img>
               <span>Любимые треки</span>
             </div>
             <div class="my-playlist">
@@ -142,7 +131,7 @@
               </div>
             </div>
           </section>
-          <h2>Только для тебя, user</h2>
+          <h2 class="music-head">Только для тебя, user</h2>
           <section class="mixes">  
               <div class="mix">
                 <div>
@@ -193,7 +182,7 @@
               </div>
 
           </section>
-          <h2>Недавно просулшано</h2>
+          <h2 class="music-head">Недавно просулшано</h2>
           <section class="mixes">
             <div class="mix">
               <div>
@@ -268,7 +257,7 @@
             </div>
 
           </section>
-          <h2>Слушаем дальше?</h2>
+          <h2 class="music-head">Слушаем дальше?</h2>
           <section class="mixes">
             <div class="mix">
               <div>
@@ -355,7 +344,7 @@
             </div>
 
           </section>
-          <h2>Лучшие треки
+          <h2 class="music-head">Лучшие треки
             <p class = "substr">Подборки хитов по исполнителям.</p>
           </h2>
           <section class="mixes">
@@ -408,8 +397,6 @@
               </div>
             </div>
           </section>
-          <section></section>
-          <section></section>
         </div>
       </main>
 
@@ -428,21 +415,22 @@
               </div>
             </div>
             <div>
-              <img class="playing-image" src="../images/add_heart.png">
+              <input type="image" class="playing-image" src="../images/add_heart.png" id="footerHeart"/>
             </div>
             <div>
-              <img class="pip-image" src="../images/picture-in-picture.png">
+              <input type="image" class="pip-image" src="../images/picture-in-picture.png" id="pip"/>
             </div>
           </div>
           <div class="playing-main">
             <div>
-              <img class="shuffle-image" src="../images/shuffle.png">
-              <img class="play-btn-image" src="../images/play-previous.png">
-              <img class="play-btn-image" src="../images/play_btn.png">
-              <img class="play-btn-image" src="../images/play-next.png">
-              <img class="play-btn-image" src="../images/repeat.png">
+              <input type="image" class="shuffle-image" src="../images/shuffle.png" id="shuffle"/>
+              <input type="image" class="play-btn-image" src="../images/play-previous.png" id="playPrev">
+              <input type="image" class="play-btn-image" src="../images/play_btn.png" id="play">
+              <input type="image" class="play-btn-image" src="../images/play-next.png" id="playNext">
+              <input type="image" class="play-btn-image" src="../images/repeat.png" id="repeat">
             </div>
             <div>
+              <!-- сделаю progress-bar и уровень громкости, когда буду писать java script-->
               <img src="../images/progress-bar-snow.PNG">
             </div>
           </div>
@@ -451,19 +439,6 @@
           </div>
         </div>
       </footer>
-
     </div>
-    <!--
-       
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    --> 
-    
   </body>
 </html>
