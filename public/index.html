@@ -11,8 +11,9 @@
     />
     <title>React App</title>
     <link rel="stylesheet" href="../css/style.css"/>
+    <script src="./script.js" defer></script>
   </head>
-  <body>
+  <body onload="onPageLoad()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root" class="root">
       <header class="header">
@@ -81,321 +82,24 @@
       <main class="content">
         <div class="music">
           <h1>Доброго времени суток</h1>
-          <section class="songs">
-            <div class="song">
-              <div>
-                <img class="song-image" src="../images/loverboy.png">
-              </div>
-              <div class="song-name">
-                Loverboy
-              </div>
-            </div>
-            <div class="song">
-              <div>
-                <img class="song-image" src="../images/song_1.png">
-              </div>
-              <div class="song-name">
-                Код
-              </div>
-            </div>
-            <div class="song">
-              <div>
-                <img class="song-image" src="../images/sister.png">
-              </div>
-              <div class="song-name">
-                Младшая сестра
-              </div>
-            </div>
-            <div class="song">
-              <div>
-                <img class="song-image" src="../images/depo.png">
-              </div>
-              <div class="song-name">
-                NBA
-              </div>
-            </div>
-            <div class="song">
-              <div>
-                <img class="song-image" src="../images/top_ru.png">
-              </div>
-              <div class="song-name">
-                Топ треков (Россия)
-              </div>
-            </div>
-            <div class="song">
-              <div>
-                <img class="song-image" src="../images/glow.png">
-              </div>
-              <div class="song-name">
-                Glow
-              </div>
-            </div>
+          <section class="songs" id="songs">
           </section>
           <h2 class="music-head">Только для тебя, user</h2>
-          <section class="mixes">  
-              <div class="mix">
-                <div>
-                  <img class="mix-image" src="../images/week.png">
-                </div>
-                <div class="mix-name">
-                  Открытия недели
-                  <div class="mix-author">
-                    Новые треки и редкие композиции в еженедельном миксе специально для тебя. Лови обновление каждый понедельник.
-                  </div>
-                </div>
-              </div>
-
-              <div class="mix">
-                <div>
-                  <img class="mix-image" src="../images/mix1.png">
-                </div>
-                <div class="mix-name">
-                  Микс дня #1
-                  <div class="mix-author">
-                    Джизус, Дора, LXNER и не только
-                  </div>
-                </div>
-              </div>
-
-              <div class="mix">
-                <div>
-                  <img class="mix-image" src="../images/mix2.png">
-                </div>
-                <div class="mix-name">
-                  Микс дня #2
-                  <div class="mix-author">
-                    LIL MORTY, midix, LILDRUGHILL и не только
-                  </div>
-                </div>
-              </div>
-
-              <div class="mix">
-                <div>
-                  <img class="mix-image" src="../images/mix3.png">
-                </div>
-                <div class="mix-name">
-                  Микс дня #3
-                  <div class="mix-author">
-                    SALUKI, ROCKET, PLOHOYPAREN и не только
-                  </div>
-                </div>
-              </div>
-
+          <section class="mixes" id="albums">  
           </section>
           <h2 class="music-head">Недавно просулшано</h2>
-          <section class="mixes">
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/on_repeat.png">
-              </div>
-              <div class="mix-name">
-                On Repeat
-                <div class="mix-author">
-                  Треки, которые тебе нравятся сейчас
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/garden.png">
-              </div>
-              <div class="mix-name">
-                GHETTO GARDEN
-                <div class="mix-author">
-                  MAYOT
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/mix4.jpg">
-              </div>
-              <div class="mix-name">
-                Микс дня #4
-                <div class="mix-author">
-                  convolk, SpaceMan Zack, Lil Peep и не только
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/untitled.jpg">
-              </div>
-              <div class="mix-name">
-                untitled
-                <div class="mix-author">
-                  semmmyq,shinra
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/mix3.png">
-              </div>
-              <div class="mix-name">
-                Микс дня #3
-                <div class="mix-author">
-                  SALUKI, ROCKET, PLOHOYPAREN и не только
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/dream.jpg">
-              </div>
-              <div class="mix-name">
-                Tsukuyomi Dream
-                <div class="mix-author">
-                  ROCKET
-                </div>
-              </div>
-            </div>
-
+          <section class="mixes" id="recentlyListen">
           </section>
           <h2 class="music-head">Слушаем дальше?</h2>
-          <section class="mixes">
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/song_1.png">
-              </div>
-              <div class="mix-name">
-                Код
-                <div class="mix-author">
-                  whyalive,Horoshiyagni
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/time-capsule.jpg">
-              </div>
-              <div class="mix-name">
-                Ностальгический микс
-                <div class="mix-author">
-                  Мы создали ностальгический плейлист специально для тебя
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/bike.jpg">
-              </div>
-              <div class="mix-name">
-                Мой байк
-                <div class="mix-author">
-                  СЕРЕГА ПИРАТ
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/3ternity.jpg">
-              </div>
-              <div class="mix-name">
-                SYSTEM 3RASE
-                <div class="mix-author">
-                  3TERNITY
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/ice.jpg">
-              </div>
-              <div class="mix-name">
-                Лёд
-                <div class="mix-author">
-                  WENARO,LXNER
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/midix.jpg">
-              </div>
-              <div class="mix-name">
-                HYPERPOP ATTACK
-                <div class="mix-author">
-                  Midix
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/dora-mix.jpg">
-              </div>
-              <div class="mix-name">
-                This is Дора.
-                <div class="mix-author">
-                  Все лучшие треки в одном плейлисте.
-                </div>
-              </div>
-            </div>
-
+          <section class="mixes" id="next">      
           </section>
           <h2 class="music-head">Лучшие треки
             <p class = "substr">Подборки хитов по исполнителям.</p>
           </h2>
-          <section class="mixes">
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/dora-mix.jpg">
-              </div>
-              <div class="mix-name">
-                This is Дора.
-                <div class="mix-author">
-                  This is Дора. Все лучшие треки в одном плейлисте.
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/fludd.jpg">
-              </div>
-              <div class="mix-name">
-                This is GONE.Fludd
-                <div class="mix-author">
-                  This is GONE.Fludd. Все лучшие треки в одном плейлисте.
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/depo.jpg">
-              </div>
-              <div class="mix-name">
-                This is Boulevard Depo
-                <div class="mix-author">
-                  This is Boulevard Depo. Все лучшие треки в одном плейлисте.
-                </div>
-              </div>
-            </div>
-
-            <div class="mix">
-              <div>
-                <img class="mix-image" src="../images/buda.jpg">
-              </div>
-              <div class="mix-name">
-                This is OG Buda.
-                <div class="mix-author">
-                  This is OG Buda. Все лучшие треки в одном плейлисте.
-                </div>
-              </div>
-            </div>
+          <section class="mixes" id="mixes">
+          </section>
+          <h2 class="music-head">Похоже на то, что вы слушаете</h2>
+          <section class="mixes" id="artist">
           </section>
         </div>
       </main>
