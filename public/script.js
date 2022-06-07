@@ -39,17 +39,17 @@ const request = async (url, method) => {
 const $artist = document.querySelector('#artist');
 
 async function getArtistAlbums() {
-    const url = "https://api.spotify.com/v1/artists/3vf8X2CaHnkcVAp6NC9C7d/albums?limit=7"
-    return await request(url, 'GET');
+  const url = "https://api.spotify.com/v1/artists/3vf8X2CaHnkcVAp6NC9C7d/albums?limit=7"
+  return await request(url, 'GET');
 }
 
-  const artist = getArtistAlbums();
+const artist = getArtistAlbums();
 
-  artist.then((data) => {
-    data.items.forEach((item) => {
-      $artist.insertAdjacentHTML(
-        'beforeend',
-        `<div class="mix">
+artist.then((data) => {
+  data.items.forEach((item) => {
+    $artist.insertAdjacentHTML(
+      'beforeend',
+      `<div class="mix">
               <div>
                 <img class="mix-image" src="${item.images[0].url}">
               </div>
@@ -60,25 +60,25 @@ async function getArtistAlbums() {
                 </div>
               </div>
         </div>`,
-      );
-    });
+    );
   });
+});
 
-  const $albums = document.querySelector('#albums');
+const $albums = document.querySelector('#albums');
 
-  async function getAlbums() {
-    const url = "https://api.spotify.com/v1/albums?ids=6VGOayoZVPmoySlmKiybdP,7hDvB29vtfPYypzxaxnMpT,"+
+async function getAlbums() {
+  const url = "https://api.spotify.com/v1/albums?ids=6VGOayoZVPmoySlmKiybdP,7hDvB29vtfPYypzxaxnMpT," +
     "3WjMbvQtYuRi4iSqWoEZc9,2rXSX9cNm16YW6OD3KqHcc"
-    return await request(url, 'GET');
-  }
-  
-  const albums = getAlbums();
+  return await request(url, 'GET');
+}
 
-  albums.then((data) => {
-    data.albums.forEach((item) => {
-      $albums.insertAdjacentHTML(
-        'beforeend',
-        `<div class="mix">
+const albums = getAlbums();
+
+albums.then((data) => {
+  data.albums.forEach((item) => {
+    $albums.insertAdjacentHTML(
+      'beforeend',
+      `<div class="mix">
               <div>
                 <img class="mix-image" src="${item.images[0].url}">
               </div>
@@ -89,15 +89,15 @@ async function getArtistAlbums() {
                 </div>
               </div>
         </div>`,
-      );
-    });
+    );
   });
+});
 
 const $songs = document.querySelector('#songs');
 
 async function getSongs() {
   const url = "https://api.spotify.com/v1/tracks?ids=5L2qd1EBfNQJBW0FivYmXj,53shWqZYUcOCTM8bn6Z2nM," +
-  "74rl89i6GlqWwOFVlBtEh9,6C7u9jJW3wgRNYZJ6Q3Mbi,0AWdqiBSPYoFbb2MbxuOuI,14xvuQEQgv98UzA2jGWLWW"
+    "74rl89i6GlqWwOFVlBtEh9,6C7u9jJW3wgRNYZJ6Q3Mbi,0AWdqiBSPYoFbb2MbxuOuI,14xvuQEQgv98UzA2jGWLWW"
   return await request(url, 'GET');
 }
 
@@ -119,39 +119,39 @@ songs.then((data) => {
   });
 })
 
-  const $playlists = document.querySelector('#artist');
+const $playlists = document.querySelector('#artist');
 
-  async function getPlaylistsDora() {
-    const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO1gK520"
-    return await request(url, 'GET');
-  }
+async function getPlaylistsDora() {
+  const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO1gK520"
+  return await request(url, 'GET');
+}
 
-    async function getPlaylistsGone() {
-      const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0a8Sf0"
-      return await request(url, 'GET');
-  }
+async function getPlaylistsGone() {
+  const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0a8Sf0"
+  return await request(url, 'GET');
+}
 
-  async function getPlaylistsBuda() {
-    const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0WIxdn"
-    return await request(url, 'GET');
+async function getPlaylistsBuda() {
+  const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0WIxdn"
+  return await request(url, 'GET');
 }
 
 async function getPlaylistsDepo() {
   const url = "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4gUoF4"
-    return await request(url, 'GET');
+  return await request(url, 'GET');
 }
 
-  const playlistsDora = getPlaylistsDora();
-  const playlistGone = getPlaylistsGone();
-  const playlistBuda = getPlaylistsBuda();
-  const playlistDepo = getPlaylistsDepo()
-  const thisIs  = [playlistsDora,playlistGone,playlistBuda,playlistDepo];
-  const $thisIs = document.querySelector('#mixes');
+const playlistsDora = getPlaylistsDora();
+const playlistGone = getPlaylistsGone();
+const playlistBuda = getPlaylistsBuda();
+const playlistDepo = getPlaylistsDepo()
+const thisIs = [playlistsDora, playlistGone, playlistBuda, playlistDepo];
+const $thisIs = document.querySelector('#mixes');
 
-  thisIs.forEach((value)=>value.then((data) => {
-      $thisIs.insertAdjacentHTML(
-        'beforeend',
-        `<div class="mix">
+thisIs.forEach((value) => value.then((data) => {
+  $thisIs.insertAdjacentHTML(
+    'beforeend',
+    `<div class="mix">
           <div>
             <img class="mix-image" src="${data.images[0].url}">
           </div>
@@ -162,23 +162,23 @@ async function getPlaylistsDepo() {
               </div>
           </div>
         </div>`,
-      );
-  }))
+  );
+}))
 
-  const $recently = document.querySelector('#recentlyListen');
+const $recently = document.querySelector('#recentlyListen');
 
-  async function getRecentlyListenAlbums() {
-    const url = "https://api.spotify.com/v1/albums?ids=3KCTalNYMYwD9LroSWFYrd,0XJ2GHflMl75zuofYfuARg"
-    return await request(url, 'GET'); 
-  }
+async function getRecentlyListenAlbums() {
+  const url = "https://api.spotify.com/v1/albums?ids=3KCTalNYMYwD9LroSWFYrd,0XJ2GHflMl75zuofYfuARg"
+  return await request(url, 'GET');
+}
 
-  const recentlyAlbums = getRecentlyListenAlbums();
+const recentlyAlbums = getRecentlyListenAlbums();
 
-  recentlyAlbums.then((data) => {
-    data.albums.forEach((item) => {
-      $recently.insertAdjacentHTML(
-        'beforeend',
-        `<div class="mix">
+recentlyAlbums.then((data) => {
+  data.albums.forEach((item) => {
+    $recently.insertAdjacentHTML(
+      'beforeend',
+      `<div class="mix">
               <div>
                 <img class="mix-image" src="${item.images[0].url}">
               </div>
@@ -189,14 +189,14 @@ async function getPlaylistsDepo() {
                 </div>
               </div>
         </div>`,
-      );
-    });
+    );
   });
+});
 
-  async function getRecentlyListenSongs() {
-    const url = "https://api.spotify.com/v1/tracks?ids=0z58HQdBeOGPCveLYfX6lO,1YADTnjt9bhRYc2Qm6ymDn,7vfWiNojqSxwOgcRR4hVo5"
-    return await request(url, 'GET');
-  }
+async function getRecentlyListenSongs() {
+  const url = "https://api.spotify.com/v1/tracks?ids=0z58HQdBeOGPCveLYfX6lO,1YADTnjt9bhRYc2Qm6ymDn,7vfWiNojqSxwOgcRR4hVo5"
+  return await request(url, 'GET');
+}
 
 const recentlySongs = getRecentlyListenSongs();
 
@@ -220,9 +220,9 @@ recentlySongs.then((data) => {
 })
 
 playlistsDora.then((data) => {
-    $recently.insertAdjacentHTML(
-      'beforeend',
-      `<div class="mix">
+  $recently.insertAdjacentHTML(
+    'beforeend',
+    `<div class="mix">
         <div>
           <img class="mix-image" src="${data.images[0].url}">
         </div>
@@ -233,10 +233,10 @@ playlistsDora.then((data) => {
             </div>
         </div>
       </div>`,
-    );
-    $next.insertAdjacentHTML(
-      'beforeend',
-      `<div class="mix">
+  );
+  $next.insertAdjacentHTML(
+    'beforeend',
+    `<div class="mix">
         <div>
           <img class="mix-image" src="${data.images[0].url}">
         </div>
@@ -247,7 +247,7 @@ playlistsDora.then((data) => {
             </div>
         </div>
       </div>`,
-    );
+  );
 })
 
 const $next = document.querySelector('#next');
@@ -280,7 +280,7 @@ songsNext.then((data) => {
 
 async function getAlbumsNext() {
   const url = "https://api.spotify.com/v1/albums?ids=1xh6IrXOzHT1Y7anMOzdiz,3m6zmxm0tQNLUTBFB5PJTR,1hNThSGNjabAId8CnNuI4L"
-  return await request(url, 'GET'); 
+  return await request(url, 'GET');
 }
 
 const albumsNext = getAlbumsNext();

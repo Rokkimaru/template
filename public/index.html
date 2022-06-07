@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <title>React App</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" class="root">
-      <header class="header">
-        <div class="top-bar">
-          <div class="arrows">
-            <button class="left  arrow" title="Назад"></button>
-            <button class="right  arrow" title="Вперед"></button>
-          </div>
-          <div class="tarif">
-            <button class="change-tarif">Сменить тариф</button>
-          </div>
-            <button class="account">
-              <img class="account-image" src="../images/account.png">
-              <span>Аккаунт</span>
-              <img class="account-image" src="../images/arrow_down.png">
-            </button>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>React App</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root" class="root">
+    <header class="header">
+      <div class="top-bar">
+        <div class="arrows">
+          <button class="left  arrow" title="Назад"></button>
+          <button class="right  arrow" title="Вперед"></button>
         </div>
-      </header>
-      
-      <div class="left-bar">
-        <div class="bar">
-          <div class="logo" title="Spotify Clone">
-            <a href="index.html"></a>
-            <img class="logo-image" src="../images/spotify_logo.png">
+        <div class="tarif">
+          <button class="change-tarif">Сменить тариф</button>
+        </div>
+        <button class="account">
+          <img class="account-image" src="../images/account.png">
+          <span>Аккаунт</span>
+          <img class="account-image" src="../images/arrow_down.png">
+        </button>
+      </div>
+    </header>
+
+    <div class="left-bar">
+      <div class="bar">
+        <div class="logo" title="Spotify Clone">
+          <a href="index.html"></a>
+          <img class="logo-image" src="../images/spotify_logo.png">
+        </div>
+        <div>
+          <ul class="menu">
+            <li class="home  list menu-elem">
+              <a class="link" href="index.html">
+                <span>Главная</span>
+              </a>
+            </li>
+            <li class="search  list menu-elem">
+              <a class="link" href="index.html">
+                <span>Поиск</span>
+              </a>
+            </li>
+            <li class="mediateka  list menu-elem">
+              <a class="link" href="index.html">
+                <span>Моя медиатека</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="playlist">
+          <div class="add-playlist">
+            <img src="../images/addplaylist.png" class="add-playlist-img">
+            <span>Создать плейлист</span>
+          </div>
+          <div class="add-playlist">
+            <img src="../images/heart.png" class="add-playlist-img">
+            <span>Любимые треки</span>
+          </div>
+          <div class="my-playlist">
+            <p>My first playlist</p>
+          </div>
+        </div>
+
+        <div class="download">
+          <span> Загрузить приложение</span>
+        </div>
+      </div>
+    </div>
+
+
+    <main class="content">
+      <div class="music">
+        <h1>Доброго времени суток</h1>
+        <section class="songs" id="songs"></section>
+        <h2 class="music-head">Только для тебя, user</h2>
+        <section class="mixes" id="albums"></section>
+        <h2 class="music-head">Недавно просулшано</h2>
+        <section class="mixes" id="recentlyListen"></section>
+        <h2 class="music-head">Слушаем дальше?</h2>
+        <section class="mixes" id="next"></section>
+        <h2 class="music-head">Лучшие треки
+          <p class="substr">Подборки хитов по исполнителям.</p>
+        </h2>
+        <section class="mixes" id="mixes"></section>
+        <h2 class="music-head">Похоже на то, что вы слушаете</h2>
+        <section class="mixes" id="artist"></section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bar">
+        <div class="now-playing">
+          <div>
+            <img class="now-image" src="../images/mayot.png">
+          </div>
+          <div class="author-name">
+            <div>
+              Mayot
+            </div>
+            <div>
+              Снег
+            </div>
           </div>
           <div>
-            <ul class="menu">
-              <li class = "home  list menu-elem">
-                <a class="link" href="index.html">
-                  <span>Главная</span>
-                </a>
-              </li>
-              <li class="search  list menu-elem">
-                <a class="link" href="index.html">
-                  <span>Поиск</span>
-                </a>
-              </li>
-              <li class="mediateka  list menu-elem">
-                <a class="link" href="index.html">
-                  <span>Моя медиатека</span>
-                </a>
-              </li>
-            </ul>
+            <input type="image" class="playing-image" src="../images/add_heart.png" id="footerHeart" />
           </div>
-          <div class="playlist">
-            <div class="add-playlist">
-              <img src="../images/addplaylist.png" class="add-playlist-img">
-              <span>Создать плейлист</span>
-            </div>
-            <div class="add-playlist">
-              <img src="../images/heart.png" class="add-playlist-img">
-              <span>Любимые треки</span>
-            </div>
-            <div class="my-playlist">
-              <p>My first playlist</p>
-            </div>
+          <div>
+            <input type="image" class="pip-image" src="../images/picture-in-picture.png" id="pip" />
           </div>
-          
-          <div class="download">
-            <span> Загрузить приложение</span>
-          </div>  
-        </div>   
+        </div>
+        <audio controls class="playing-main">
+          <source src="../music/MAYOT - Снег.mp3">
+        </audio>
       </div>
-      
-     
-      <main class="content">
-        <div class="music">
-          <h1>Доброго времени суток</h1>
-          <section class="songs" id="songs"></section>
-          <h2 class="music-head">Только для тебя, user</h2>
-          <section class="mixes" id="albums"></section>
-          <h2 class="music-head">Недавно просулшано</h2>
-          <section class="mixes" id="recentlyListen"></section>
-          <h2 class="music-head">Слушаем дальше?</h2>
-          <section class="mixes" id="next"></section>
-          <h2 class="music-head">Лучшие треки
-            <p class = "substr">Подборки хитов по исполнителям.</p>
-          </h2>
-          <section class="mixes" id="mixes"></section>
-          <h2 class="music-head">Похоже на то, что вы слушаете</h2>
-          <section class="mixes" id="artist"></section>
-        </div>
-      </main>
+    </footer>
+  </div>
+</body>
 
-      <footer class="footer">
-        <div class="footer-bar">
-          <div class="now-playing">
-            <div>
-              <img class="now-image" src="../images/mayot.png">
-            </div>
-            <div class="author-name">
-              <div>
-                Mayot
-              </div>
-              <div>
-                Снег
-              </div>
-            </div>
-            <div>
-              <input type="image" class="playing-image" src="../images/add_heart.png" id="footerHeart"/>
-            </div>
-            <div>
-              <input type="image" class="pip-image" src="../images/picture-in-picture.png" id="pip"/>
-            </div>
-          </div>
-            <audio controls class="playing-main">
-              <source src="../music/MAYOT - Снег.mp3">
-            </audio>
-        </div>
-      </footer>
-    </div>
-  </body>
 </html>
