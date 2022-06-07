@@ -6,16 +6,16 @@ import LeftBar from './left-bar';
 import Footer from './footer';
 import Song from './song';
 import Mix from './mix';
-import {IContent, ISong} from './interfaces'
+import { IContent, ISong } from './interfaces'
 
 function App() {
   const [token, setToken] = useState('');
   const [albums, setAlbums] = useState<IContent[]>([]);
   const [artists, setArtists] = useState<IContent[]>([]);
-  const [songs, setSongs] = useState<ISong[]>([]);
+  const [nextAlbums, setNextAlbums] = useState<IContent[]>([]);
   const [recentlyAlbums, setRecentlyAlbums] = useState<IContent[]>([]);
   const [recentlySongs, setRecentlySongs] = useState<ISong[]>([]);
-  const [nextAlbums, setNextAlbums] = useState<IContent[]>([]);
+  const [songs, setSongs] = useState<ISong[]>([]);
   const [nextSongs, setNextSongs] = useState<ISong[]>([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function App() {
         console.log(error);
       });
   }, []);
-  
+
   useEffect(() => {
     axios
       .get("https://api.spotify.com/v1/artists/3vf8X2CaHnkcVAp6NC9C7d/albums?limit=7", {
@@ -56,7 +56,7 @@ function App() {
   useEffect(() => {
     axios
       .get("https://api.spotify.com/v1/tracks?ids=5L2qd1EBfNQJBW0FivYmXj,53shWqZYUcOCTM8bn6Z2nM," +
-      "74rl89i6GlqWwOFVlBtEh9,6C7u9jJW3wgRNYZJ6Q3Mbi,0AWdqiBSPYoFbb2MbxuOuI,14xvuQEQgv98UzA2jGWLWW", {
+        "74rl89i6GlqWwOFVlBtEh9,6C7u9jJW3wgRNYZJ6Q3Mbi,0AWdqiBSPYoFbb2MbxuOuI,14xvuQEQgv98UzA2jGWLWW", {
         headers: {
           'Content-Type': 'application/json',
           Authorization: 'Bearer ' + token,
@@ -72,8 +72,8 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://api.spotify.com/v1/albums?ids=6VGOayoZVPmoySlmKiybdP,7hDvB29vtfPYypzxaxnMpT,"+
-      "3WjMbvQtYuRi4iSqWoEZc9,2rXSX9cNm16YW6OD3KqHcc", {
+      .get("https://api.spotify.com/v1/albums?ids=6VGOayoZVPmoySlmKiybdP,7hDvB29vtfPYypzxaxnMpT," +
+        "3WjMbvQtYuRi4iSqWoEZc9,2rXSX9cNm16YW6OD3KqHcc", {
         headers: {
           'Content-Type': 'application/json',
           Authorization: 'Bearer ' + token,
@@ -136,28 +136,28 @@ function App() {
   }, [token]);
 
   useEffect(() => {
-    function result(){
+    function result() {
       axios
-      .get("https://api.spotify.com/v1/tracks?ids=7D8k995g6jdie4NF1E7Tpu,53shWqZYUcOCTM8bn6Z2nM,75XM03G3WuW8vTRhJ7B3Hu", {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: 'Bearer ' + token,
-        },
-      })
-      .then((response) => {
-        setNextSongs(response.data.tracks);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        .get("https://api.spotify.com/v1/tracks?ids=7D8k995g6jdie4NF1E7Tpu,53shWqZYUcOCTM8bn6Z2nM,75XM03G3WuW8vTRhJ7B3Hu", {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + token,
+          },
+        })
+        .then((response) => {
+          setNextSongs(response.data.tracks);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
     result()
   }, [token])
 
   return (
     <div className="App">
-      <Header/>
-      <LeftBar/>
+      <Header />
+      <LeftBar />
       <main className="content">
         <div className="music">
           {token ? (
@@ -184,7 +184,7 @@ function App() {
                 })}
               </section>
               <h2 className="music-head">Слушаем дальше?
-                <p className = "substr">Подборки хитов по исполнителям.</p>
+                <p className="substr">Подборки хитов по исполнителям.</p>
               </h2>
               <section className="mixes" id="next">
                 {nextSongs.map(({ id, name, artists, album }) => {
@@ -201,12 +201,12 @@ function App() {
                 })}
               </section>
             </>
-          ): (
+          ) : (
             <div>Sorry</div>
           )}
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
