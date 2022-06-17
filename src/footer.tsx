@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
 
 export default function footer() {
   return (
@@ -24,7 +23,7 @@ export default function footer() {
             <input type="image" alt="img" className="pip-image" src="./images/picture-in-picture.png" id="pip" />
           </div>
         </div>
-        <ReactAudioPlayer className="playing-main" src="./music/MAYOT - Снег.mp3" controls />
+        <audio className="playing-main" src="./music/MAYOT - Снег.mp3" controls />
       </div>
     </footer>
   );

@@ -1,6 +1,8 @@
-import React from 'react';
-
-export default function card(props: { image: string; name: string }) {
+export type SongProps = {
+  image: string;
+  name: string;
+}
+export default function card(props: SongProps) {
   return (
     <div className="song">
       <div>

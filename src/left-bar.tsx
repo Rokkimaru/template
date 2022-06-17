@@ -5,24 +5,24 @@ export default function leftBar() {
     <div className="left-bar">
       <div className="bar">
         <div className="logo" title="Spotify Clone">
-          <a href="index.html">
+          <a href="/">
             <img className="logo-image" src="./images/spotify_logo.png" alt="img"></img>
           </a>
         </div>
         <div>
           <ul className="menu">
             <li className="home  list menu-elem">
-              <a className="link" href="index.html">
+              <a className="link" href="/">
                 <span>Главная</span>
               </a>
             </li>
             <li className="search  list menu-elem">
-              <a className="link" href="index.html">
+              <a className="link" href="/">
                 <span>Поиск</span>
               </a>
             </li>
             <li className="mediateka  list menu-elem">
-              <a className="link" href="index.html">
+              <a className="link" href="/">
                 <span>Моя медиатека</span>
               </a>
             </li>

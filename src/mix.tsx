@@ -1,6 +1,10 @@
-import React from 'react';
+export type MixProps = {
+  image: string;
+  name: string;
+  desc: string;
+}
 
-export default function mix(props: { image: string; name: string; desc: string }) {
+export default function mix(props: MixProps) {
   return (
     <div className="mix">
       <div>
